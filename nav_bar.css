@@ -1,0 +1,206 @@
+/*navigation bar*/
+header{
+    background-color: white;
+    border-bottom: 1px solid #dbdbdb;
+    width: 1030px;
+    padding: 0 249px;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    position: static;
+  }
+
+  header ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 30px;
+  }
+  header ul li:last-child{
+    margin-right: 0;
+  }
+  header ul li a{
+    text-decoration: none;
+    color: #000000;
+    padding: 22px 0;
+    display: inline-block;
+    transition: all ease 0.3s;
+    font-size: 30px;
+    cursor: pointer;
+    position: relative;
+  }
+   header ul li a::after {
+    content: '';
+    height: 3px;
+    left: 0;
+    bottom: 5px;
+    width: 0;
+    position: absolute;
+    background-color: rgb(221, 22, 22);
+    transition: 0.5s;
+   }
+
+   header ul li a:hover:after {
+    width: 100%;
+   }
+
+   header ul .All_Strands {
+    position: absolute;
+    width: 200px;
+    background-color: white;
+    box-shadow: 0 20px 45px #00000020;
+    margin-top: -50px;
+    opacity: 0;
+    z-index: -999;
+    transition: all ease 0.5s;
+   }
+
+   header ul li:hover .All_Strands {
+    z-index: 999;
+    opacity: 1;
+    margin-top: 0;
+    border-radius: 5px;
+   }
+
+   /* syle of the background and trasiton of the navigation bar*/
+  .nav_bar_sidebar {
+    height: 100%;
+    width: 350px;
+    position: fixed;
+    background-color: #000000;
+    opacity: 0.8;
+    transition: 0.5s ease;
+    font-family: 'Open Sans', sans-serif;
+    right: 0; /* add this to position the navigation bar on the right side */
+    transform: translateX(350px); /* remove the negative translation */
+    
+  }
+  
+  /* syle of the menu of the navigation bar*/
+  h1{
+    color: rgb(230, 225, 235);
+    font-size: 30px;
+    font-weight: 800 ;
+    text-align:left;
+    padding: 12px 0;
+    padding-right: 30px;
+    padding-left: 10px;
+    pointer-events: none;
+    font-family: 'open-sans', sans-serif;
+  }
+    
+  /* syle for the navigation bar*/
+  .side li{
+    list-style: none;
+  }
+  /* syle for text of the navigation bar*/
+  .side li a{
+    color:rgb(143, 143, 143);
+    font-size: 25px;
+    font-weight: 500;
+    padding: 12px 0;
+    display: block;
+    text-transform:capitalize;
+    text-decoration: none;
+    transition: 0.2 ease-out;
+    font-family: 'open-sans', sans-serif;
+  }
+  .side li:hover a{
+  color: rgb(255, 251, 251);
+  }
+  /* syle for content of the navigation bar*/
+  .side li a i{
+    width: 40px;
+    text-align: center;
+    
+  }
+  /* syle for content of the navigation button*/
+  #navinp{
+    display: none;
+    visibility: hidden;
+    -webkit-appearance: none;
+    appearance: none; 
+  }
+  /* syle for the box of the button of the navigation button*/
+  .toggle{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top:20px;
+    right: 15px;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: #5c1a1a;
+    box-shadow: 0 0 10px #000000;
+  }
+  /* syle for the box of the button of the navigation button*/
+  .toggle .common{
+    position: absolute;
+    height: 2px;
+    width:20px;
+    background-color: #e6e6e6;
+    border-radius: 50px;
+    transition: 0.3s ease;
+  }
+  /* syle for the box of the lines of the navigation button*/
+  .toggle .top_line{
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  
+  }
+  .toggle .middle_line{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  
+  }
+  .toggle .bottom_line{
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  
+  }
+  input:checked ~ .toggle .top_line{
+    left: 2px;
+    top: 14px;
+    width:25px;
+    transform: rotate(45deg);
+  }
+  input:checked ~ .toggle .bottom_line{
+    left: 2px;
+    top: 14px;
+    width:25px;
+    transform: rotate(-45deg);
+  }
+  input:checked ~ .toggle .middle_line{
+   opacity: 0;
+    transform: translate(20px);
+  }
+   input:checked ~ .sidebar{
+    transform: translateX(0);
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+   }
+   /* LOGOUT BUTTON */
+   .button{
+    background-color: rgb(66, 66, 66); /* dark red */
+    color: white;
+    padding: 16px 70px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 400px;
+    margin-left: 80px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+   }
+   .button :hover{
+    color: white;
+   }
+   .button :hover::after {
+    background-color: #000000;
+   }
+/*end of navigation bar*/   

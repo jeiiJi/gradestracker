@@ -1,0 +1,149 @@
+@import "sidebar.css";
+@import "nav_bar.css";
+
+*{
+    list-style: none;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to right, 
+    #BB2649, #800000);
+    color: #FFFFFF;
+    overflow-x:hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#background_photo{
+    z-index: -999;
+    filter: blur(8px);
+    opacity: 40%;
+    position: fixed;
+}
+
+/*located in both main.html and lessons.html*/
+/*This is  the header "Course" that is seen at the top left*/
+#main_course_title{
+    margin-left: 90px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    font-size: 50px;
+    display: inline-block;
+    font-family:'Times New Roman', Times, serif;
+    position: relative;
+}
+
+/*filter section, located both in main.html 
+and lessons.html*/
+
+.filter{
+    margin-top: 60px;
+    margin-left: 115px;
+}
+
+button:hover{
+    background-color: #ababab;
+}
+/*end of filter section*/
+
+/*located in the main.html*/
+/*this is the design for the Course button that leads to lessons.html*/
+.course_title{
+    background-image: linear-gradient(to right, #2E2D2D, #8F8A8A);
+    border: 4px solid;
+    border-color: #B8B8B8;
+    height: 120px;
+    width: 60%;
+    text-align: left;
+    margin-left: 170px;
+    margin-top: 15px;
+    font-size: 25px;
+    position: absolute;
+}
+
+/*located in lessons.html*/
+.title_course_name{
+    margin-left: 90px;
+    font-size: 30px;
+    color: #8F8A8A;
+    margin-top: 15px;
+    display: block;
+    float: right;
+    padding-right: 860px;
+    padding-top: 45px;
+    font-family:'Times New Roman', Times, serif;
+    position: absolute;
+}
+
+.lessons_filter{
+    margin-top: 30px;
+    margin-left: 90px;
+    position: absolute;
+}
+
+/*table css*/
+#table_header{
+    border: 4px solid;
+    margin-left: 100px;
+    margin-right: 30px;
+    margin-top: 15px;
+    position: relative;
+}
+
+#name_header{
+    display: inline-block;
+    text-align: left;
+    padding-left: 30px;
+}
+
+#date_created_header{
+    display: block;
+    float: right;
+    text-align: center;
+    padding-right: 200px;
+}
+
+
+/*Div Tables*/
+.divTable{ 
+    display: table;
+    border: 4px solid #ffffff;
+    margin-left: 100px;
+    margin-right: 30px;
+    margin-top: 0px;
+    width: 1344px;
+    padding: 15px;
+    position: absolute;
+    padding-top: 30px;
+}
+
+.divTableRow { 
+    display: table-row; 
+}
+
+.divTableRow:hover{
+  background-color: #2E2D2D;
+  opacity: 60%;
+}
+
+.divTableCell {
+    display: table-cell;
+}
+
+.name_cell{
+    display: inline-block;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 1020px;
+    padding-bottom: 40px;
+}
+
+.date_cell{
+    display: block;
+    float: right;
+    text-align: center;
+}
+/*end of lessons.html*/
+

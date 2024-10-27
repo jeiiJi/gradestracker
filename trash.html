@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Grades Tracker Main Page</title>
+    <meta charset="UTF_8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--links of logos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://fontawesome.com/icons/house?f=classic&s=solid" crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://fontawesome.com/icons/book-open?f=classic&s=solid" crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://fontawesome.com/icons/circle-question?f=classic&s=solid" crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://fontawesome.com/icons/trash?f=classic&s=solid" crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://fontawesome.com/icons/file-circle-plus?f=classic&s=solid" crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/>
+
+    <!--links for the css files-->
+    <!--I separated them into parts because it is too long and I'm having 
+    a hard time finding this and that-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--background photo-->
+    <img id="background_photo" src="pictures/unc_background_photo.png" 
+    width="1500" height="715">
+
+    <!--navigation bar-->
+    <header> 
+        <div class="Nav"> 
+            <img src="pictures/Home.png" width="90%">
+        </div>
+
+        <nav> 
+            <ul> 
+                <li><a href="#"> Strand <i class="fas fa-caret-down"> </i> </a>
+                    <ul class="All_Strands">
+                        <li> <a href="#"> STEM</a> </li>
+                        <li> <a href="#"> ABM</a> </li>
+                        <li> <a href="#"> GAS</a> </li>
+                        <li> <a href="#"> HUMMS</a> </li>
+                        <li> <a href="#"> TVL </a> </li>
+                    </ul>
+                </li>
+                <li> <a href="#"> News </a></li>
+                <li> <a href="#"> Publish </a></li>
+                <li><a href="#"> Links <i class="fas fa-caret-down"> </i> </a>
+                    <ul class="All_Strands"> 
+                        <li> <a href="https://unc.edu.ph/"> UNC Website</a></li>
+                        <li> <a href="https://my.unc.edu.ph/Login.aspx"> My UNC Web Portal</a></li>
+                        <li> <a href="http://my.unc.edu.ph:91/U-SHOP"> U_SHOP | Online Store</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <label>
+                <!--this is the checkbox-->
+                <input id=navinp type="checkbox">
+                <div class="toggle">
+                  <span class="top_line common"></span>
+                  <span class="middle_line common"></span>
+                  <span class="bottom_line common"></span>
+                </div>
+                
+                <div class="nav_bar_sidebar">
+                  <!--this is the menu navigation bar-->
+                  <h1>Menu</h1>
+                  <ul class="side">
+                    <li><a herf="#"><i class="fa-brands fa-codepen"></i>Grades Tracker</a></li>
+                    <li><a herf="#"><i class="far fa-folder"></i>Attendance Checklist</a></li>
+                    <li><a herf="#"><i class="fas fa-cogs"></i>Group Activty & Progress</a></li>
+                    <li><a herf="#"><i class="fa-solid fa-calendar-days"></i>Performance & Feedback</a></li>
+                  </ul>
+            
+                  <a href="https://www.youtube.com/watch?v=KlgqYSwk5MM" button class="button"> Logout </button></a> 
+                </div>
+            </label>
+        </nav>
+    </header>
+
+    <!--sidebar-->
+    <section>
+        <div class="sidebar">
+
+        <ul class="new_file_option">
+            <li>
+                <a href="create_new_file.html"
+                  ><ion-icon name="new-file-outline"></ion-icon>
+                  <i class="fa-solid fa-file-circle-plus"></i>
+                  <p>New File</p></a>
+            </li>
+        </ul>
+
+        <ul class="sidebar_options"> 
+            <li>
+                <a href="main.html"
+                  ><ion-icon name="home-outline"></ion-icon>
+                  <i class="fa-solid fa-house"></i>
+                  <p>Courses</p></a>
+            </li>
+            <li>
+                <a href="lessons.html"
+                  ><ion-icon name="course-lessons-outline"></ion-icon>
+                  <i class="fa-solid fa-book-open"></i>
+                  <p>Lessons</p></a>
+            </li>
+        </ul>
+
+
+        <ul class="sidebar_footer">
+            <li id="help">
+                <a href="#"
+                ><ion-icon name="help-outline"></ion-icon>
+                <i class="fa-solid fa-circle-question"></i>
+                <p>Help</p></a>
+            </li>
+
+            <li id="trash_bin">
+                <a href="#"
+                ><ion-icon name="trash-bin-outline"></ion-icon>
+                <i class="fa-solid fa-trash"></i>
+                <p>Trash Bin</p></a>
+            </li>
+        </ul>
+           
+        </div>
+    </section>
