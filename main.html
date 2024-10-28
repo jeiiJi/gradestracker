@@ -29,64 +29,63 @@
     <!--Links for the css files-->
     <link rel="stylesheet" href="style.css">
 </head>
+    <!--navigation bar-->
+<header> 
+    <div class="Nav"> 
+        <img src="pictures/Home.png" width="90%">
+    </div>
+
+    <nav> 
+        <ul> 
+            <li><a href="#"> Strand <i class="fas fa-caret-down"> </i> </a>
+                <ul class="All_Strands">
+                    <li> <a href="#"> STEM</a> </li>
+                    <li> <a href="#"> ABM</a> </li>
+                    <li> <a href="#"> GAS</a> </li>
+                    <li> <a href="#"> HUMMS</a> </li>
+                    <li> <a href="#"> TVL </a> </li>
+                </ul>
+            </li>
+            <li> <a href="#"> News </a></li>
+            <li> <a href="#"> Publish </a></li>
+            <li><a href="#"> Links <i class="fas fa-caret-down"> </i> </a>
+                <ul class="All_Strands"> 
+                    <li> <a href="https://unc.edu.ph/"> UNC Website</a></li>
+                    <li> <a href="https://my.unc.edu.ph/Login.aspx"> My UNC Web Portal</a></li>
+                    <li> <a href="http://my.unc.edu.ph:91/U-SHOP"> U_SHOP | Online Store</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <label>
+            <!--this is the checkbox-->
+            <input id=navinp type="checkbox">
+            <div class="toggle">
+              <span class="top_line common"></span>
+              <span class="middle_line common"></span>
+              <span class="bottom_line common"></span>
+            </div>
+            
+            <div class="nav_bar_sidebar">
+              <!--this is the menu navigation bar-->
+              <h1>Menu</h1>
+              <ul class="side">
+                <li><a herf="#"><i class="fa-brands fa-codepen"></i>Grades Tracker</a></li>
+                <li><a herf="#"><i class="far fa-folder"></i>Attendance Checklist</a></li>
+                <li><a herf="#"><i class="fas fa-cogs"></i>Group Activty & Progress</a></li>
+                <li><a herf="#"><i class="fa-solid fa-calendar-days"></i>Performance & Feedback</a></li>
+              </ul>
+        
+              <a href="https://www.youtube.com/watch?v=KlgqYSwk5MM" button class="button"> Logout </button></a> 
+            </div>
+        </label>
+    </nav>
+</header>
 
 <body>
     <!--background photo-->
     <img id="background_photo" src="pictures/unc_background_photo.png" 
     width="100%" height="100%">
-
-    <!--navigation bar-->
-    <header> 
-        <div class="Nav"> 
-            <img src="pictures/Home.png" width="90%">
-        </div>
-
-        <nav> 
-            <ul> 
-                <li><a href="#"> Strand <i class="fas fa-caret-down"> </i> </a>
-                    <ul class="All_Strands">
-                        <li> <a href="#"> STEM</a> </li>
-                        <li> <a href="#"> ABM</a> </li>
-                        <li> <a href="#"> GAS</a> </li>
-                        <li> <a href="#"> HUMMS</a> </li>
-                        <li> <a href="#"> TVL </a> </li>
-                    </ul>
-                </li>
-                <li> <a href="#"> News </a></li>
-                <li> <a href="#"> Publish </a></li>
-                <li><a href="#"> Links <i class="fas fa-caret-down"> </i> </a>
-                    <ul class="All_Strands"> 
-                        <li> <a href="https://unc.edu.ph/"> UNC Website</a></li>
-                        <li> <a href="https://my.unc.edu.ph/Login.aspx"> My UNC Web Portal</a></li>
-                        <li> <a href="http://my.unc.edu.ph:91/U-SHOP"> U_SHOP | Online Store</a></li>
-                    </ul>
-                </li>
-            </ul>
-
-            <label>
-                <!--this is the checkbox-->
-                <input id=navinp type="checkbox">
-                <div class="toggle">
-                  <span class="top_line common"></span>
-                  <span class="middle_line common"></span>
-                  <span class="bottom_line common"></span>
-                </div>
-                
-                <div class="nav_bar_sidebar">
-                  <!--this is the menu navigation bar-->
-                  <h1>Menu</h1>
-                  <ul class="side">
-                    <li><a herf="#"><i class="fa-brands fa-codepen"></i>Grades Tracker</a></li>
-                    <li><a herf="#"><i class="far fa-folder"></i>Attendance Checklist</a></li>
-                    <li><a herf="#"><i class="fas fa-cogs"></i>Group Activty & Progress</a></li>
-                    <li><a herf="#"><i class="fa-solid fa-calendar-days"></i>Performance & Feedback</a></li>
-                  </ul>
-            
-                  <a href="https://www.youtube.com/watch?v=KlgqYSwk5MM" button class="button"> Logout </button></a> 
-                </div>
-            </label>
-        </nav>
-    </header>
 
     <!--sidebar-->
     <!--
@@ -97,7 +96,8 @@
         <a href="#">Lessons</a>
         <a href="#">About</a>
     </section> -->
-
+    <!--this putthe sidebar on the side and the contents on its side-->
+    <div  class="main_container">
 
     <section> 
         <div class="sidenav">
@@ -182,7 +182,9 @@
             </div>
         </section>
     </main>
-
+    
+    </div>
 </body>
 
 </html>
+    
