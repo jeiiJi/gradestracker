@@ -1,154 +1,11 @@
-/*START OF SIDEBAR
-:root {
-    --main-color: #ffffff;
-    --main-transition: 0.5s all ease-in-out;
-  }
-
-End Global Rules
-Start Sidebar 
-
-
-.sidebar {
-    z-index: 98;
-    background-color:#800000;
-    padding: 10px;
-    position: fixed;
-    height: 69px;
-    top: 60%;
-    transform: translateY(-50%);
-    overflow: hidden;
-    transition: var(--main-transition);
-    width: 35px;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-}
-
-.sidebar:hover {
-    width: 300px;
-}
-  
-.sidebar ul {
-    padding-bottom: 30px;
-    list-style: none;
-}
-
-.sidebar ul li {
-    transition: var(--main-transition);
-}
-
-.sidebar:hover ul li {
-    padding-left: 0px;
-}
-
-.sidebar ul li a {
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: 0.3s all ease-in-out;
-    width: 300px;
-    color: #ffffff;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.sidebar:hover a {
-    width: 100%;
-}
-
-.sidebar ul li a:hover {
-    background-color: #530b0b;
-    color: var(--main-color);
-}
-
-.sidebar ul li a ion-icon {
-    font-size: 22px;
-}
-
-.sidebar ul li a p {
-    visibility: hidden;
-    opacity: 0;
-    transition: var(--main-transition);
-}
-
-.sidebar:hover ul li a p {
-    visibility: visible;
-    opacity: 1;
-}
-
-.sidebar_footer{
-    margin-top: 200px;
-}
-
-#help{
-    display: inline-block;
-  }
-
-#trash_bin{
-    display: block;
-    float: right;
-  }
-
-.sidebar ul li i{
-    padding-right: 30px;
-    height: 30px;
-    width: 40px;
-}
-
-Search Bar
-this is the search bar section, will restore 
-after the site is fixed.
-  .search {
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    overflow: hidden;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: 0.3s all ease-in-out;
-    transition: var(--main-transition);
-}
-
-.search input[type="text"] {
-    padding: 6px;
-    margin-right: 10px;
-    border: none;
-    font-size: 17px;
-    border-radius: 4px;
-}
-
-.search button {
-    padding: 6px 10px;
-    background: white;
-    color: #8F8A8A;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.search button i {
-    font-size: 18px;
-}
-
-.search button:hover {
-    background: #8F8A8A;
-    color: white;
-}
-
-
-End Sidebar */
-
-/* The sidebar menu */
 .sidenav {
     height: 100%;
     width: 250px; 
     position: static; 
     z-index: 2; 
-    top: 0; /* Stay at the top */
+    top: 0;
     left: 0;
-    background-color: #000000; /* Black */
+    background-color: #000000;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
 }
@@ -199,8 +56,4 @@ End Sidebar */
     color: #ffffff;
     font-weight: 500;
     text-decoration: none;
-}
-
-.main_container{
-    display: flex;
 }

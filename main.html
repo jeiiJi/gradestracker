@@ -29,7 +29,13 @@
     <!--Links for the css files-->
     <link rel="stylesheet" href="style.css">
 </head>
-    <!--navigation bar-->
+
+<body>
+    <!--background photo-->
+    <img id="background_photo" src="pictures/unc_background_photo.png" 
+    width="100%" height="100%">
+
+<!--NAVIGATION BAR-->
 <header> 
     <div class="Nav"> 
         <img src="pictures/Home.png" width="90%">
@@ -82,36 +88,8 @@
     </nav>
 </header>
 
-<body>
-    <!--background photo-->
-    <img id="background_photo" src="pictures/unc_background_photo.png" 
-    width="100%" height="100%">
-
-    <!--sidebar-->
-    <!--
-    <section class="sidenav">
-        Side navigation
-        <a href="#">New File</a>
-        <a href="#">Courses</a>
-        <a href="#">Lessons</a>
-        <a href="#">About</a>
-    </section> -->
-    <!--this putthe sidebar on the side and the contents on its side-->
-    <div  class="main_container">
-
-    <section> 
-        <div class="sidenav">
-            <!--
-            <div class="search">
-                <form action="#">
-                    <input type="text" placeholder="Search Courses"
-                           name="search">
-                    <button>
-                        <i class="fa fa-search"></i>
-                    </button>
-                </form>
-            </div>-->
-
+<section class="main_container">
+        <div class="sidenav"> <!--SIDEBAR/SIDENAV-->
         <ul class="new_file_option">
             <li>
                 <a href="create_new_file.html"
@@ -123,67 +101,62 @@
 
         <ul class="sidebar_options"> 
             <li>
-                <a href="main.html"
-                  ><ion-icon name="home-outline"></ion-icon>
-                  <i class="fa-solid fa-house"></i>
-                  <p>Courses</p></a>
+                <a href="main.html">
+                    <ion-icon name="home-outline"></ion-icon><i class="fa-solid fa-house"></i>
+                    <p>Courses</p>
+                </a>
             </li>
             <li>
-                <a href="lessons.html"
-                  ><ion-icon name="course-lessons-outline"></ion-icon>
-                  <i class="fa-solid fa-book-open"></i>
-                  <p>Lessons</p></a>
+                <a href="lessons.html">
+                    <ion-icon name="course-lessons-outline"></ion-icon><i class="fa-solid fa-book-open"></i>
+                    <p>Lessons</p>
+                </a>
             </li>
         </ul>
 
-
         <ul class="sidebar_footer">
             <li id="help">
-                <a href="help.html"
-                ><ion-icon name="help-outline"></ion-icon>
-                <i class="fa-solid fa-circle-question"></i>
-                <p>Help</p></a>
+                <a href="help.html">
+                    <ion-icon name="help-outline"></ion-icon><i class="fa-solid fa-circle-question"></i>
+                    <p>Help</p>
+                </a>
             </li>
 
             <li id="trash_bin">
-                <a href="trash.html"
-                ><ion-icon name="trash-bin-outline"></ion-icon>
-                <i class="fa-solid fa-trash"></i>
-                <p>Trash Bin</p></a>
+                <a href="trash.html">
+                    <ion-icon name="trash-bin-outline"></ion-icon><i class="fa-solid fa-trash"></i>
+                    <p>Trash Bin</p>
+                </a>
             </li>
         </ul>
            
         </div>
-    </section>
 
-    <!--title-->
-    <main class="homepage_main">
-        <section class="title_section">
+
+
+    <div class="title_section">
         <h1 id="main_course_title">Course</h1>
-        </section>
-
-        <!--filter section-->
-        <div class="filter">
-            <section class="filter_dropdown">
-                <label for="option">Sort by:</label>
-                <select name="option" id="option">
-                    <option value="Name (A-Z)">Name (A-Z)</option>
-                    <option value="Name (Z-A)">Name (Z-A)</option>
-                    <option value="Date (Oldest to Newest)">Date (Oldest to Newest)</option>
-                    <option value="Date (Newest to Oldest)">Date (Newest to Oldest)</option>
-                </select>
-                <button type="submit" width="50px">Sort</button>
-            </section>
-        </div>
-
-        <section>
-            <div>
-                <h3 class="course_title" onclick="location.href='lessons.html'">Course Name</h3>
-            </div>
-        </section>
-    </main>
-    
     </div>
+
+    <!--filter section-->
+    <div class="filter">
+        <section class="filter_dropdown">
+            <label for="option">Sort by:</label>
+            <select name="option" id="option">
+                <option value="Name (A-Z)">Name (A-Z)</option>
+                <option value="Name (Z-A)">Name (Z-A)</option>
+                <option value="Date (Oldest to Newest)">Date (Oldest to Newest)</option>
+                <option value="Date (Newest to Oldest)">Date (Newest to Oldest)</option>
+            </select>
+            <button type="submit" width="50px">Sort</button>
+        </section>
+    </div>
+
+    <div>
+        <h3 class="course_title" onclick="location.href='lessons.html'">Course Name</h3>
+    </div>
+    
+</section>
 </body>
 
 </html>
