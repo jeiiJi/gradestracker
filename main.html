@@ -88,13 +88,12 @@
     </nav>
 </header>
 
-<section> <!--SIDEBAR/SIDENAV-->
-        <div class="sidenav">
+<section class="main_container">
+    <div class="sidebar"> <!--SIDEBAR-->
         <ul class="new_file_option">
             <li>
-                <a href="create_new_file.html"
-                  ><ion-icon name="new-file-outline"></ion-icon>
-                  <i class="fa-solid fa-file-circle-plus"></i>
+                <a href="create_new_file.html">
+                  <ion-icon name="new-file-outline"></ion-icon><i class="fa-solid fa-file-circle-plus"></i>
                   <p>New File</p></a>
             </li>
         </ul>
@@ -113,8 +112,9 @@
                 </a>
             </li>
         </ul>
-
+        
         <ul class="sidebar_footer">
+            <hr>
             <li id="help">
                 <a href="help.html">
                     <ion-icon name="help-outline"></ion-icon><i class="fa-solid fa-circle-question"></i>
@@ -130,33 +130,35 @@
             </li>
         </ul>
            
+    </div>
+
+
+    <main> <!--This is the main part of the web, I decided to add a main so I can differentiate
+        the sidebar from this area while all being under the same section-->
+        <div class="title_section">
+            <h1 id="main_course_title">Course</h1>
         </div>
-</section>
 
-<div class="main_container">
-    <div class="title_section">
-        <h1 id="main_course_title">Course</h1>
-    </div>
+        <!--filter section-->
+        <div class="filter">
+            <section class="filter_dropdown">
+                <label for="option">Sort by:</label>
+                <select name="option" id="option">
+                    <option value="Name (A-Z)">Name (A-Z)</option>
+                    <option value="Name (Z-A)">Name (Z-A)</option>
+                    <option value="Date (Oldest to Newest)">Date (Oldest to Newest)</option>
+                    <option value="Date (Newest to Oldest)">Date (Newest to Oldest)</option>
+                </select>
+                <button type="submit" width="50px">Sort</button>
+            </section>
+        </div>
 
-    <!--filter section-->
-    <div class="filter">
-        <section class="filter_dropdown">
-            <label for="option">Sort by:</label>
-            <select name="option" id="option">
-                <option value="Name (A-Z)">Name (A-Z)</option>
-                <option value="Name (Z-A)">Name (Z-A)</option>
-                <option value="Date (Oldest to Newest)">Date (Oldest to Newest)</option>
-                <option value="Date (Newest to Oldest)">Date (Newest to Oldest)</option>
-            </select>
-            <button type="submit" width="50px">Sort</button>
-        </section>
-    </div>
-
-    <div>
-        <h3 class="course_title" onclick="location.href='lessons.html'">Course Name</h3>
-    </div>
+        <div>
+            <h3 class="course_title" onclick="location.href='lessons.html'">Course Name</h3>
+        </div>
+    </main>
     
-</div>
+</section>
 </body>
 
 </html>
