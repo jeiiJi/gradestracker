@@ -1,5 +1,5 @@
-@import "sidebar.css";
 @import "nav_bar.css";
+@import "sidebar.css";
 
 *{
     list-style: none;
@@ -8,8 +8,6 @@
 }
 
 body{
-    background-image: linear-gradient(to right, 
-    #BB2649, #800000);
     color: #FFFFFF;
     overflow-x:hidden;
     margin: 0;
@@ -19,12 +17,17 @@ body{
 #background_photo{
     z-index: -999;
     filter: blur(8px);
-    opacity: 40%;
     position: fixed;
 }
 
 .main_container{
     display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+main{
+    flex:2;
 }
 
 /*located in both main.html and lessons.html*/

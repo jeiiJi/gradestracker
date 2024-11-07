@@ -10,6 +10,7 @@ header{
     align-items: center;
     z-index: 1;
     position: fixed;
+    height: 100px;
   }
 
   header ul li {
