@@ -9,7 +9,8 @@ header{
     justify-content: space-between;
     align-items: center;
     z-index: 1;
-    position: static;
+    position: fixed;
+    height: 100px;
   }
 
   header ul li {
