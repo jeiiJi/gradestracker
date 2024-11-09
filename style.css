@@ -1,6 +1,6 @@
 @import "nav_bar.css";
 @import "sidebar.css";
-@import "tables.css";
+/*@import "tables.css";*/
 
 *{
     list-style: none;
@@ -26,17 +26,36 @@ body{
     flex-direction: row;
 }
 
+.title_section{
+    display: flex;
+    width: 500px;
+    align-items: center;
+    flex-direction: row;
+    margin: 0;
+}
+
 /*located in both main.html and lessons.html*/
 /*This is  the header "Course" that is seen at the top left*/
 #main_course_title{
     margin-left: 60px;
     margin-bottom: 10px;
-    margin-right: 0px;  
+    margin-right: 0;  
     font-size: 50px;
-    display: inline-block;
     font-family:'Times New Roman', Times, serif;
     color: #FFFFFF;
-    position: relative;
+    flex-grow: 200px;
+}
+
+.title_section i{
+    size: 20px;
+}
+
+
+/*located in lessons.html*/
+.title_course_name{
+    font-size: 40px;
+    color: #ffffff;
+    font-family:'Times New Roman', Times, serif;
 }
 
 /*filter section, located both in main.html 
@@ -64,20 +83,6 @@ button:hover{
     margin-left: 70px;
     margin-top: 15px;
     font-size: 25px;
-}
-
-/*located in lessons.html*/
-.title_course_name{
-    margin-left: 90px;
-    font-size: 30px;
-    color: #8F8A8A;
-    margin-top: 15px;
-    display: block;
-    float: right;
-    padding-right: 860px;
-    padding-top: 45px;
-    font-family:'Times New Roman', Times, serif;
-    position: absolute;
 }
 
 .lessons_filter{

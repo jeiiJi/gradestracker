@@ -21,6 +21,8 @@
     referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="https://fontawesome.com/icons/trash?f=classic&s=solid" crossorigin="anonymous" 
     referrerpolicy="no-referrer"/>
+    <link rel="ztylesheet" href="https://fontawesome.com/icons/greater-than?f=classic&s=solid" crossorigin="anonymous" 
+    referrerpolicy="no-referrer"/>
 
     <!--links for the css files-->
     <!--I separated them into parts because it is too long and I'm having 
@@ -42,49 +44,50 @@ width="100%" height="100%">
   </div>
 
   <nav> 
-      <ul> 
-          <li><a href="#"> Strand <i class="fas fa-caret-down"> </i> </a>
-              <ul class="All_Strands">
-                  <li> <a href="#"> STEM</a> </li>
-                  <li> <a href="#"> ABM</a> </li>
-                  <li> <a href="#"> GAS</a> </li>
-                  <li> <a href="#"> HUMMS</a> </li>
-                  <li> <a href="#"> TVL </a> </li>
-              </ul>
-          </li>
-          <li> <a href="#"> News </a></li>
-          <li> <a href="#"> Publish </a></li>
-          <li><a href="#"> Links <i class="fas fa-caret-down"> </i> </a>
-              <ul class="All_Strands"> 
-                  <li> <a href="https://unc.edu.ph/"> UNC Website</a></li>
-                  <li> <a href="https://my.unc.edu.ph/Login.aspx"> My UNC Web Portal</a></li>
-                  <li> <a href="http://my.unc.edu.ph:91/U-SHOP"> U_SHOP | Online Store</a></li>
-              </ul>
-          </li>
-      </ul>
+    <ul> 
+      <li><a href="#"> Strand <i class="fas fa-caret-down"> </i> </a>
+        <ul class="All_Strands">
+          <li> <a href="#"> STEM</a> </li>
+          <li> <a href="#"> ABM</a> </li>
+          <li> <a href="#"> GAS</a> </li>
+          <li> <a href="#"> HUMMS</a> </li>
+          <li> <a href="#"> TVL </a> </li>
+        </ul>
+      </li>
 
-      <label>
-          <!--this is the checkbox-->
-          <input id=navinp type="checkbox">
-          <div class="toggle">
-            <span class="top_line common"></span>
-            <span class="middle_line common"></span>
-            <span class="bottom_line common"></span>
-          </div>
+      <li> <a href="#"> News </a></li>
+      <li> <a href="#"> Publish </a></li>
+      <li><a href="#"> Links <i class="fas fa-caret-down"> </i> </a>
+        <ul class="All_Strands"> 
+          <li> <a href="https://unc.edu.ph/"> UNC Website</a></li>
+          <li> <a href="https://my.unc.edu.ph/Login.aspx"> My UNC Web Portal</a></li>
+          <li> <a href="http://my.unc.edu.ph:91/U-SHOP"> U_SHOP | Online Store</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <label>
+      <!--this is the checkbox-->
+      <input id=navinp type="checkbox">
+      <div class="toggle">
+        <span class="top_line common"></span>
+        <span class="middle_line common"></span>
+        <span class="bottom_line common"></span>
+      </div>
           
-          <div class="nav_bar_sidebar">
-            <!--this is the menu navigation bar-->
-            <h1>Menu</h1>
-            <ul class="side">
-              <li><a herf="#"><i class="fa-brands fa-codepen"></i>Grades Tracker</a></li>
-              <li><a herf="#"><i class="far fa-folder"></i>Attendance Checklist</a></li>
-              <li><a herf="#"><i class="fas fa-cogs"></i>Group Activty & Progress</a></li>
-              <li><a herf="#"><i class="fa-solid fa-calendar-days"></i>Performance & Feedback</a></li>
-            </ul>
+      <div class="nav_bar_sidebar">
+        <!--this is the menu navigation bar-->
+        <h1>Menu</h1>
+        <ul class="side">
+          <li><a herf="#"><i class="fa-brands fa-codepen"></i>Grades Tracker</a></li>
+          <li><a herf="#"><i class="far fa-folder"></i>Attendance Checklist</a></li>
+          <li><a herf="#"><i class="fas fa-cogs"></i>Group Activty & Progress</a></li>
+          <li><a herf="#"><i class="fa-solid fa-calendar-days"></i>Performance & Feedback</a></li>
+        </ul>
       
-            <a href="https://www.youtube.com/watch?v=KlgqYSwk5MM" button class="button"> Logout </button></a> 
-          </div>
-      </label>
+        <a href="https://www.youtube.com/watch?v=KlgqYSwk5MM" button class="button"> Logout </button></a> 
+      </div>
+    </label>
   </nav>
 </header>
 
@@ -135,12 +138,13 @@ width="100%" height="100%">
   </div>
   
   <main> <!--This is the main part of the web, I decided to add a main so I can differentiate
-  the sidebar from this area while all being under the same section-->
+    the sidebar from this area while all being under the same section-->
     
     <!--title-->
     <div class="title_section">
-    <h1 onclick="location.href='main.html'" id="main_course_title">Course</h1>
-    <h1 class="title_course_name"> > Course Name</h1>
+      <h1 onclick="location.href='main.html'" id="main_course_title">Course</h1>
+      <i class="fa-solid fa-greater-than"></i>
+      <h1 class="title_course_name">Course Name</h1>
     </div>
 
     <!--filter section-->
@@ -157,6 +161,7 @@ width="100%" height="100%">
       </section>
     </div>
 
+    <!--Will likely remove and change them with php tables
     <div class="divTable">
       <div id="divTable_header">
         <h4 id="name_header">Name</h4>
@@ -192,6 +197,7 @@ width="100%" height="100%">
       </div>
 
     </div>
+    -->
   </main>
 </section>
 </body>
