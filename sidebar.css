@@ -1,22 +1,21 @@
 .sidebar {
     height: 100%;
-    width: 270px; 
     position: static; 
     z-index: 2; 
     top: 0;
     left: 0;
-    background-color: #800000;
+    background-color: #000000;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
     flex: 1;
+    width: 90px; 
 }
   
 /* The navigation menu links */
 .sidebar a {
-    padding: 6px 8px 6px 10px;
+    padding: 6px 8px 6px;
     text-decoration: none;
-    font-size: 25px;
-    color: #000000;
+    color: #808080;
     display: block;
 }
   
@@ -43,15 +42,15 @@
 
 .sidebar ul li i{
     height: 30px;
-    width: 25px;
+    width: 60px;
 }
 
 .sidebar ul li a {
-    padding: 10px;
+    padding-left: 10px;
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 30px;
+    width: 60px;
     font-weight: 500;
     text-decoration: none;
 }
@@ -59,6 +58,5 @@
 .sidebar hr{
     margin-top: 50%;
     border-color: #000000;
-    width: 270px;
     margin-left: 0;
 }
