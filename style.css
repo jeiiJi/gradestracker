@@ -39,11 +39,14 @@ body{
 /*located in both main.html and lessons.html*/
 /*This is  the header "Course" that is seen at the top left*/
 .main_course_title{
-    margin: 0px 0px 10px 60px;
+    margin: 0px 10px 10px 60px;
     font-size: 50px;
     flex-grow: 200px;
     font-family: serif;
     color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700;
 }
 
 .title_course_name{
@@ -55,14 +58,24 @@ body{
     background-color: #ababab;
 }
 
-.course_title{
+.course_title_container{
     background-image: linear-gradient(to right, #2E2D2D, #8F8A8A);
     border: 4px solid;
     border-color: #B8B8B8;
     height: 120px;
-    width: 90%; 
-    text-align: left;
+    width: 100%;
     margin-left: 70px;
     margin-top: 15px;
-    font-size: 25px;
+    position: relative;
+}
+
+.course_title{
+    text-align: left;
+    margin: 0;
+    font-size: 40px;
+    font-weight: 300;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
 }
