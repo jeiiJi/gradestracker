@@ -43,6 +43,10 @@ body{
     z-index: 20;
 }
 
+.main_container main{
+    margin-left: var(--sidebar-width);
+}
+
 .title_section{
     display: flex;
     width: 800px;

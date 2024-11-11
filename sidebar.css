@@ -1,7 +1,6 @@
 .sidebar {
     width: var(--sidebar-width);
     height: 100%;
-    top: 0;
     left: 0;
     background-color: #000000;
     overflow-x: hidden; /* Disable horizontal scroll */
@@ -10,7 +9,7 @@
     flex-direction: column;
     text-align: center;
     padding: 10px;
-    position: sticky;
+    position: fixed;
 }
   
 /* The navigation menu links */
