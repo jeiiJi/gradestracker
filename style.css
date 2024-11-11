@@ -30,7 +30,7 @@ body{
     display: flex;
     flex-direction: column;
     position: fixed;
-    z-index: 10;
+    z-index: 9;
 }
 
 .main_container{
@@ -39,7 +39,8 @@ body{
     position: static;
     z-index: 1;
     padding-top: var(--navbar-height);
-    padding-left: var(--sidebar-width);
+    /*padding-left: var(--sidebar-width);*/
+    z-index: 20;
 }
 
 .title_section{
