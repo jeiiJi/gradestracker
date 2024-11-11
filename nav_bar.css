@@ -1,16 +1,14 @@
-/*navigation bar*/
 header{
     background-color: white;
     border-bottom: 1px solid #dbdbdb;
     width: 1030px;
+    height: var(--navbar-height);
     padding: 0 249px;
-    margin-top: 0;
+    top: 0;
     display: flex;  
     justify-content: space-between;
     align-items: center;
-    z-index: 1;
     position: static;
-    height: 100px;
   }
 
   header ul li {
@@ -204,4 +202,3 @@ header{
    .button :hover::after {
     background-color: #000000;
    }
-/*end of navigation bar*/   

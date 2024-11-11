@@ -1,31 +1,31 @@
 .sidebar {
-    width: 250px;
+    width: var(--sidebar-width);
     height: 100%;
-    position: static; 
-    z-index: 2; 
     top: 0;
     left: 0;
     background-color: #000000;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px; 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
   
 /* The navigation menu links */
 .sidebar a {
-    padding: 6px 8px 6px;
+    padding: 6px 8px;
     text-decoration: none;
     color: #808080;
     display: block;
 }
-  
+    
 /* When you mouse over the navigation links, change their color */
 .sidebar a:hover {
     color: #f1f1f1;
   }
   
 .sidebar_footer{
-    margin-top: 350px;
-    margin-bottom: 10px;
+    margin: 350px 0px 10px;
 }
 
 #help{

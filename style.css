@@ -15,15 +15,31 @@ body{
     padding: 0;
 }
 
+:root {
+    --navbar-height: 100px;
+    --sidebar-width: 270px;
+  }
+
 #background_photo{
-    z-index: -999;
+    z-index: -1;
     filter: blur(8px);
     position: fixed;
+}
+
+.sidelines_container{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 10;
 }
 
 .main_container{
     display: flex;
     flex-direction: row;
+    position: static;
+    z-index: 1;
+    padding-top: var(--navbar-height);
+    padding-left: var(--sidebar-width);
 }
 
 .title_section{

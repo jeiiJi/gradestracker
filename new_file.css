@@ -1,5 +1,5 @@
-@import url("sidebar.css");
-@import url("nav_bar.css");
+@import "sidebar.css";
+@import "nav_bar.css";
 
 *{
     list-style: none;
@@ -8,8 +8,23 @@
 }
 
 body{
-    background-image: #ffffff;
-    color: #000000;
+    color: #FFFFFF;
     overflow-x:hidden;
+    margin: 0;
+    padding: 0;
 }
+
+#background_photo{
+    z-index: -1;
+    position: fixed;
+}
+
+.main_container{
+    display: flex;
+    flex-direction: row;
+    position: static;
+    z-index: 1;
+}
+
+
 
