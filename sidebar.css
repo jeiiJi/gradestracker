@@ -75,20 +75,22 @@
     align-items: center;
     justify-content: center;
     z-index: 9999;
+    color: #000000;
 }
 
+/*FORMS + pop-ups*/
 /* When checkbox is checked, show popup */
 .popup-checkbox:checked ~ .popup-overlay {
     display: flex;
 }
 
-/* Rest of the styling for the form */
 .popup-form {
     background: #fff;
-    padding: 20px;
+    padding: 10px;
     width: 90%;
-    max-width: 400px;
+    max-width: 800px;
     border-radius: 8px;
+    height: 500px;
     position: relative;
 }
 
@@ -97,6 +99,6 @@
     top: 10px;
     right: 10px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 50px;
     color: #888;
 }

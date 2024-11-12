@@ -163,25 +163,50 @@ style="z-index: -1; filter:blur(8px); position:fixed;">
         </div>
     </main>
 
+        
+    <!-- Checkbox control for pop-up visibility -->
     <input type="checkbox" id="popup-toggle" class="popup-checkbox" hidden>
-    <div class="popup-overlay">
+
+    <!-- Pop-up Overlay and Form Structure -->
+    <section class="popup-overlay">
         <div class="popup-form">
+            <!-- Label to close the pop-up -->
             <label for="popup-toggle" class="close-popup">&times;</label>
-            <h2>Form Title</h2>
-            <form>
-                <label for="name">Title:</label>
-                <input type="text" id="name" name="name" required>
-                <!-- Submit button now uses form action properly -->
-                <button type="submit">Submit</button>
+            
+            <h2>Create a New File</h2>
+            <form action="action_page.php" method="get">
+                <section>
+                    <label for="name">Title: </label>
+                    <input type="text" id="name" name="name" required>
+                </section>
+
+                <section class="course-type">
+                    <label for="recommended-course">Course: </label>
+                    <input list="recommended-courses" id="recommended-course" name="recommended-course">
+                    <datalist id="recommended-course">
+                        <option value="English"></option>
+                        <option value="Physical Education"></option>
+                        <option value="Science"></option>
+                    </datalist>
+                </section>
+
+                <section class="toppings">
+                    <span>What do you want to track?</span>
+                    <br>
+                    <input type="checkbox" name="milestone" id="milestone" value="milestone">
+                    <label for="milestone">Milestone</label>
+                    <input type="checkbox" name="final-output" id="final-output" value="final-output">
+                    <label for="final-output">Final Output</label>
+                    <input type="checkbox" name="assessment" id="assessment" value="assessment">
+                    <label for="assessment">Assessment</label>
+                </section>
+
+                <button type="submit" class="popup_submit_button">Submit</button>
             </form>
         </div>
-    </div>
-
-    
+    </section>
+ 
 </section>
-
 </body>
-
-
 </html>
     
