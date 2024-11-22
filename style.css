@@ -1,4 +1,4 @@
-@import "nav_bar.css";
+/*@import "nav_bar.css";*/
 @import "sidebar.css";
 /*@import "tables.css";*/
 
@@ -9,18 +9,35 @@
 }
 
 body{
-    color: #FFFFFF;
+    color: #8F8A8A;
     overflow-x:hidden;
     margin: 0;
     padding: 0;
 }
 
-:root {
+:root{
     --navbar-height: 100px;
-    --sidebar-width: 270px;
-  }
+    --sidebar-width: 170px;
+}
 
-.sidelines_container{
+/*background*/
+.background{
+    display: flex;
+    position: fixed;
+    z-index: -1;
+}
+
+/*divider*/
+.white_divider{
+    height: 50%;
+    width: 100%;
+    background-color: #FFF;
+    position: fixed;
+    bottom: 0;
+    z-index: -2;
+}
+  
+.navbar_container{
     display: flex;
     flex-direction: column;
     z-index: 1;
@@ -95,4 +112,3 @@ body{
 .create_new_file {
     width: 300px;
 }
-

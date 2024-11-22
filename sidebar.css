@@ -9,18 +9,19 @@
     flex-direction: column;
     padding: 10px;
     position: fixed;
+    overflow-x: hidden;
 }
   
 /* The navigation menu links */
-.sidebar li, .sidebar a {
-    padding: 6px 8px 0;
+.sidebar li, .sidebar a{
+    padding: 6px 8px 0 20px;
     text-decoration: none;
     color: #808080;
     display: block;
 }
     
 /* When you mouse over the navigation links, change their color */
-.sidebar li :hover, a :hover {
+.sidebar li :hover, a :hover{
     color: #f1f1f1;
   }
   
@@ -29,21 +30,11 @@
     order: 3;
 }
 
-#help{
-    display: inline-block;
-}
-
-#trash_bin{
-    display: block;
-    float: right;
-    margin-right: 10%;
-}
-
 .sidebar ul li, .sidebar ul a {
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 60px;
+    width: 70px;
     font-weight: 500;
     text-decoration: none;
 }
