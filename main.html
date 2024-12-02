@@ -31,21 +31,17 @@
 </head>
 
 <body>
-<section class="background">
+<section class="all_backgrounds_container">
 <!--background photo--> 
-<img id="background_photo" src="pictures/unc_sp_bg.jpg" 
-width="100%" 
-height="80%";
-style="z-index: -3; 
-    position:fixed; 
-    padding-top: var(--navbar-height);
-    ">
+<img id="background_photo" src="pictures/unc_sp_bg.jpg" alt=" ">
+<div>
+    <div class="main_contents_background"></div>
+</div>
 
-<div class="white_divider"></div>
 </section>
 
-<div><!--<section class="navbar_container">
-    NAVIGATION BAR
+<section class="navbar_container">
+    <!--NAVIGATION BAR-->
     <header> 
         <div class="Nav"> 
             <img src="pictures/Home.png" width="90%">
@@ -74,7 +70,7 @@ style="z-index: -3;
             </ul>
 
             <label>
-                this is the checkbox
+                <!--this is the checkbox-->
                 <input id=navinp type="checkbox">
                 <div class="toggle">
                 <span class="top_line common"></span>
@@ -83,7 +79,7 @@ style="z-index: -3;
                 </div>
                 
                 <div class="nav_bar_sidebar">
-                this is the menu navigation bar
+                <!--this is the menu navigation bar-->
                 <h1>Menu</h1>
                 <ul class="side">
                     <li><a herf="#"><i class="fa-brands fa-codepen"></i>Grades Tracker</a></li>
@@ -97,8 +93,8 @@ style="z-index: -3;
             </label>
         </nav>
     </header>
-</section>--> 
-</div>
+</section>
+
 
 <section class="main_container">
     <div class="sidebar"> <!--SIDEBAR-->
@@ -127,7 +123,6 @@ style="z-index: -3;
         </ul>
         
         <ul class="sidebar_footer">
-            <hr>
             <li id="trash_bin">
                 <a href="trash.html">
                     <ion-icon name="trash-bin-outline"></ion-icon><i class="fa-solid fa-trash"></i>
@@ -165,16 +160,17 @@ style="z-index: -3;
                 </div>
             </div>
         </div>
+        
     </main>
 
         
-    <!-- Checkbox control for pop-up visibility -->
+    <!--Checkbox control for pop-up visibility-->
     <input type="checkbox" id="popup-toggle" class="popup-checkbox" hidden>
 
-    <!-- Pop-up Overlay and Form Structure -->
+    <!--Pop-up Overlay and Form Structure-->
     <section class="popup-overlay">
         <div class="popup-form">
-            <!-- Label to close the pop-up -->
+            Label to close the pop-up
             <label for="popup-toggle" class="close-popup">&times;</label>
             
             <h2>Create a New File</h2>
@@ -211,6 +207,6 @@ style="z-index: -3;
     </section>
  
 </section>
+
 </body>
 </html>
-    
