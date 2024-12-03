@@ -1,6 +1,5 @@
-@import "nav_bar.css";
-@import "sidebar.css";
-/*@import "tables.css";*/
+@import "navbar.css";
+@import "create_file_button.css";
 
 *{
     list-style: none;
@@ -16,14 +15,37 @@ body{
 }
 
 :root{
-    --navbar-height: 100px;
-    --sidebar-width: 230px;
+    --navbar-height: 80px;
     --background-color: #800000;
 }
 
 /*background*/
 .all_backgrounds_container{
     display: flex;
+}
+
+#site_title{
+    margin-top: var(--navbar-height);
+    font-size: 50px;
+    flex-grow: 200px;
+    font-family: serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700;
+    
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.4px);
+    -webkit-backdrop-filter: blur(2.4px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    width: 500px;
+    height: 200px;
+    justify-content: center;
+    position: fixed;
+    z-index: 4;
+    left: 30%;
 }
 
 #background_photo{
@@ -58,10 +80,6 @@ body{
     z-index: 3;
 }
 
-.main_container main{
-    margin-left: var(--sidebar-width);
-}
-
 .title_section{
     display: flex;
     width: 800px;
@@ -75,7 +93,7 @@ body{
 /*located in both main.html and lessons.html
 /*This is  the header "Course" that is seen at the top left*/
 .main_course_title{
-    margin: 0px 10px 10px 60px;
+    margin-top: var(--navbar-height);
     font-size: 50px;
     flex-grow: 200px;
     font-family: serif;
@@ -120,3 +138,76 @@ body{
 .create_new_file {
     width: 300px;
 }
+
+.title_section, .items_list, .course_title_container{
+    top: 0;
+}
+
+
+/*Modal CSS*/
+
+/* Pop-up and overlay styling */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;  /* Initially hidden */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    color: #000000;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #myBtn{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: 5;
+    font-size: 20px;
+    text-align: center;
+    margin: 30px;
+  }
