@@ -1,6 +1,3 @@
-@import "navbar.css";
-@import "create_file_button.css";
-
 * {
     list-style: none;
     font-size: 15px;
@@ -116,7 +113,6 @@ body {
 }
 
 /*Modal CSS*/
-
 /* Pop-up and overlay styling */
 .popup-overlay {
     position: fixed;
