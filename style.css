@@ -11,11 +11,6 @@ body {
     padding: 0;
 }
 
-/*background*/
-.all_backgrounds_container {
-    display: flex;
-}
-
 .site_title {
     background: rgba(255, 255, 255, 0.07);
     border-radius: 15px;
@@ -25,10 +20,10 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.06);
     width: 800px;
     height: 150px;
-    position: fixed;
     left: 25%;
-    top: 150px;
-    justify-content: center;
+    top: 160px;
+    z-index: 1;
+    position: relative;
 }
 
 .site_title p {
@@ -40,46 +35,123 @@ body {
     text-decoration: none;
     cursor: pointer;
     font-weight: 700;
-    z-index: 1;
     text-align: center;
+    margin: auto;
 }
 
-#background_photo {
+#main_background_photo, #lesson_background_photo {
     position: fixed;
     height: 100%;
     width: 100%;
     z-index: -1;
 }
 
-/*divider*/
 .main_contents_background {
+    position: static;
     height: 1920px;
-    width: 1920px;
+    width: 100%;
     background-color: #FFFFFF;
     z-index: 2;
-    margin-top: 470px;
-    display: flex;
+    margin-top: 350px;
 }
 
-.title_section {
-    display: flex;
-    width: 800px;
-    height: 150px;
-    align-items: center;
-    flex-direction: row;
-    margin: 0;
-    gap: 10px;
+.lessoncontentbg_highlight {
+    width: 80px;
+    height: 100%;
+    background-color: #800000;
+    right: 0;
+    position: fixed;
+    z-index: 6;
 }
+
+.maincontentbg_highlight {
+    width: 100%;
+    height: 80px;
+    background-color: #800000;
+    top: 0;
+    position: sticky;
+    z-index: 6;
+}
+
+.main_contents_background main {
+    padding: 0 20px;
+    margin: 0 10px;
+    z-index: 3;
+}
+
+.lesson_main_container {
+    height: 100%;
+    width: 57%;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    background-color: #000000;
+    padding: 30px 20px 20px 70px;
+    overflow-x: hidden;
+}
+
+.lesson_title_section {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    text-align: center;
+}
+
+.main_title_section {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.lesson_course_title {
+    z-index: 3;
+    position: relative;
+    padding: 0;
+
+
+}
+
+.lesson_course_title h1 {
+    font-size: 60px;
+    font-family: "Oswald", Arial;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.lesson_course_title h2 {
+    font-size: 50px;
+    font-family: "Oswald", Arial;
+    color: #cdcdcd;
+    cursor: pointer;
+    font-weight: 400px;
+}
+
 
 .main_course_title {
-    font-size: 50px;
-    flex-grow: 200px;
-    font-family: serif;
-    color: #FFFFFF;
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    margin-top: 30px;
 }
+
+.main_course_title h1 {
+    font-size: 60px;
+    font-family: "Oswald", Arial;
+    color: #000000;
+    cursor: pointer;
+    font-weight: 600;
+}
+
 
 .title_course_name {
     font-family: serif;
@@ -91,26 +163,30 @@ body {
 }
 
 .course_title_container {
-    background-image: linear-gradient(to right, #2E2D2D, #8F8A8A);
+    background-image: linear-gradient(to right, #800000, #9f0909);
     border: 4px solid;
-    border-color: #B8B8B8;
-    height: 120px;
+    border-color: #800000;
+    height: 100px;
+    width: 90%;
     margin-left: 70px;
-    margin-top: 15px;
+    margin-top: 80px;
     position: relative;
+    border-radius: 15px;
 }
 
 .course_title {
     width: 100%;
     text-align: left;
-    margin: 0;
-    font-size: 40px;
+    margin: 10px;
+    font-size: 24px; /* Adjust font size for better fit */
     font-weight: 300;
-    position: absolute;
-    bottom: 0;
+    position: absolute; /* Default positioning */
+    padding: 0; /* Remove padding unless needed */
     left: 0;
-    padding: 10px;
+    bottom: 0;
+    color: #FFFFFF;
 }
+
 
 /*Modal CSS*/
 /* Pop-up and overlay styling */
@@ -118,8 +194,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 200vw;
+    height: 200vh;
     background: rgba(0, 0, 0, 0.6);
     display: none;  /* Initially hidden */
     align-items: center;
@@ -127,6 +203,7 @@ body {
     z-index: 9999;
     color: #000000;
 }
+
 
 /* The Modal (background) */
 .modal {
@@ -145,16 +222,19 @@ body {
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 20% auto;
+    height: 300px;
+    width: 600px;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 15px;
+    color: #000000;
 }
   
 .close {
-    color: #aaa;
+    color: #000000;
     float: right;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
 }
   
@@ -165,14 +245,65 @@ body {
 }
   
 #myBtn {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 100%;
+    border-width: 4px;
     bottom: 0;
     right: 0;
     position: fixed;
     z-index: 5;
-    font-size: 20px;
+    font-size: 50px;
+    font-weight: 500;
     text-align: center;
     margin: 30px;
+}
+
+.modal-content h2 {
+    font-size: 30px;
+    font-family: serif;
+}
+
+.modal-content label {
+    font-size: 15px;
+}
+
+.modal-content button {
+    text-align: center;
+    position: static;
+    bottom: 0;
+    right: 0;
+}
+
+/* Style form sections */
+.modal-content section {
+    margin-bottom: 20px; /* Space between inputs */
+}
+
+.modal-content section label {
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+.modal-content section input {
+    width: 250px; /* Full width input */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit Button Positioned at Bottom Right */
+.popup_submit_button {
+    position: absolute;
+    bottom: 20px; /* Distance from bottom edge */
+    right: 20px; /* Distance from right edge */
+    padding: 10px 20px;
+    background-color: #a30202;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup_submit_button:hover {
+    background-color: #800000;
 }
