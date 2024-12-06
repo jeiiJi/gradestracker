@@ -7,11 +7,6 @@ CREATE TABLE files (
     final_output ENUM('Yes', 'No'),
     assessment ENUM('Yes', 'No'),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-testing bro
+} sdasd
 
-<<<<<<< HEAD
 */
-=======
-*/ afljnleanfalenfiae
->>>>>>> 076fcde1ff6bbc237d512b067ce6ec829d75984f
