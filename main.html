@@ -51,66 +51,11 @@
                 </div>
             </div>
 
-            <!-- The Modal --> <button id="myBtn">+</button></a>
-            <div id="myModal" class="modal">
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Create a new file</h2>
-                    <form action="action_page.php" method="get">
-                        <section>
-                            <label for="name">Title: </label>
-                            <input type="text" id="name" name="name" required>
-                        </section>
-
-                        <section class="course-type">
-                            <label for="recommended-course">Course: </label>
-                            <input list="recommended-courses" id="recommended-course" name="recommended-course">
-                            <datalist id="recommended-course">
-                                <option value="English"></option>
-                                <option value="Physical Education"></option>
-                                <option value="Science"></option>
-                            </datalist>
-                        </section>
-
-                        <button type="submit" class="popup_submit_button"
-                        onclick="location.href='index.php'"
-                        >Submit</button>
-                    </form>
-                </div>
-            </div>
+            <button id="myBtn" onclick="location.href='create_new_file.html'">+</button></a>
             
-
         </main>
     </div>
 
-    <script> //script for the modal
-        // Get the modal
-        var modal = document.getElementById("myModal");
-        
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-        
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-        
-        // When the user clicks the button, open the modal 
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-        
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-        
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-            modal.style.display = "none";
-            }
-        }
-        </script>
 </section>
 </body>
 </html>

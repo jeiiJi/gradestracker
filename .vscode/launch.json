@@ -2,10 +2,10 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "msedge",
+      "type": "chrome",
       "request": "launch",
       "name": "Open main.html",
-      "file": "c:\\Users\\ethie\\Documents\\gradestracker\\main.html"
+      "file": "c:\\xampp\\htdocs\\gradestracker\\main.html"
     },
     {
       "name": "C/C++ Runner: Debug Session",
