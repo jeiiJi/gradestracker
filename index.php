@@ -29,7 +29,7 @@ if ($selected_subject) {
     <title>Grade Tracker</title>
     <style>
         body { font-family: Arial, sans-serif; }
-        table { width: 60%; margin: 20px auto; border-collapse: collapse; }
+        table { width: 50%; margin: 50px; border-collapse: collapse; left:40px; }
         th, td { padding: 10px; border: 1px solid #ddd; text-align: center; }
         th { background-color: #f4f4f4; }
         input[type="number"] { width: 90%; padding: 5px; }
@@ -38,13 +38,93 @@ if ($selected_subject) {
         .points_columnHeader { width: 15%; }
         .name_columnHeader { width: 70%; }
         .grade_columnHeader { width: 15%; }
+
+        /*NAVBAR CSS*/
+        /* Navbar styling */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px; /* Set a specific height */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            background-color: #333; /* Add a background color */
+        }
+
+        /* Return button styling */
+        .return-button {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #555555;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Dropdown styling */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            right: 0;
+        }
+
+        .dropdown select {
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #444;
+            color: #000000;
+            appearance: none;
+            outline: none;
+        }
+
+        .dropdown select:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
-<?php 
-include 'tracker_navbar.html';
-?>
+<section class="navbar_container">
+<!-- Navbar -->
+<div class="navbar">
+    <!-- Return Button -->
+    <button class="return-button" onclick="location.href='//localhost/gradestracker/main.html'">◀</button>
 
+    <!-- Dropdown for student names -->
+    <div class="dropdown">
+        <select id="student-dropdown" onchange="redirectToTracker()">
+            <option value="">Select a Student</option>
+            <option value="tracker.php?student_id=1">John Doe</option>
+            <option value="tracker.php?student_id=2">Jane Doe</option>
+            <option value="tracker.php?student_id=3">Ethien Dizon</option>
+        </select>
+    </div>
+</div>
+
+<script>
+    // JavaScript to handle dropdown redirection
+    function redirectToTracker() {
+        const dropdown = document.getElementById('student-dropdown');
+        const selectedValue = dropdown.value;
+
+        if (selectedValue) {
+            window.location.href = selectedValue; // Redirect to the selected tracker's page
+        }
+    }
+</script>
+</section>
+
+<section class="subject_subnavbar_container">
 <div class="subject-buttons">
     <!-- Buttons for subjects -->
     <button onclick="window.location.href='index.php'">Tracker Guide</button>
@@ -54,8 +134,11 @@ include 'tracker_navbar.html';
         </button>
     <?php } ?>
 </div>
+</section>
 
-<!-- Display Table -->
+<section class="whole_tracker_container">
+<!-- FIRST TABLE / MAIN TRACKER -->
+<div class="mainTracker_table_container">
 <table>
     <thead>
         <tr>
@@ -100,6 +183,7 @@ include 'tracker_navbar.html';
     </tbody>
 </table>
 
+<!--PROCESS OF GRADES OF MAIN TRACKER TABLE-->
 <script>
     // Update grade and calculate overall grade using AJAX
     function updateGrade(input) {
@@ -143,6 +227,16 @@ include 'tracker_navbar.html';
         document.getElementById("overall-grade").textContent = `${totalGrade.toFixed(2)}%`;
     }
 </script>
+</div>
+
+<!-- SECOND TABLE / CRITERIA TRACKER -->
+<div class="criteriaTracker_table_container">
+    <!--CODE HERE-->
+</div>
+
+</section>
+
+
 
 </body>
 </html>
