@@ -41,7 +41,10 @@ if ($selected_subject) {
     </style>
 </head>
 <body>
-<?php include 'tracker_navbar.html' ?>
+<?php 
+include 'tracker_navbar.html';
+include 'grades_weight processor.php';
+?>
 
 <div class="subject-buttons">
     <!-- Buttons for subjects -->

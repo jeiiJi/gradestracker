@@ -29,6 +29,7 @@
 </head>
 
 <body>
+    <button class="return-button" onclick="location.href='C:/xampp/htdocs/gradestracker/main.html'">◀</button>
 <!-- The Modal --> 
 <div id="myModal" class="modal">
     <!-- Modal content -->
@@ -70,8 +71,7 @@
                     <input type="number" id="assessment" name="assessment" min="0" max="100">
                 </section>
             </div>
-    
-            <button type="submit" class="popup_submit_button">Submit</button>
+            <button onclick="createCourse()" class="popup_submit_button">Create</button>
         </form>
 
         <script>
@@ -87,10 +87,7 @@
                     this.submit(); // Proceed to backend submission
                 }
             });
-        </script>
 
-
-        <script>
             document.getElementById("myForm").addEventListener("submit", function (e) {
                 e.preventDefault(); // Prevent default submission
         
@@ -100,12 +97,11 @@
                 window.location.href = 'index.php';
             });
         </script>
-
     </div>
 </div>
 
-
-<script> //script for the modal
+<script>
+ //script for the modal
     // Get the modal
     var modal = document.getElementById("myModal");
     
@@ -131,6 +127,89 @@
         modal.style.display = "none";
         }
     }
-    </script>
+
+    function fetchCourses() {
+        fetch('fetch_courses.php')
+            .then(response => response.json())
+            .then(data => {
+                const courseList = document.getElementById('course-list');
+                courseList.innerHTML = '';
+                data.forEach(course => {
+                    const courseDiv = document.createElement('div');
+                    courseDiv.className = 'course';
+                    courseDiv.innerHTML = `
+                        <span>${course.course_name}</span>
+                        <span class="three-dots" onclick="showOptions(${course.id})">...</span>
+                    `;
+                    courseList.appendChild(courseDiv);
+                });
+            });
+    }
+
+    function createCourse() {
+        const courseName = document.getElementById('course-name').value;
+        const isDefault = document.getElementById('is-default').checked;
+        fetch('course_handler.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ action: 'create', course_name: courseName, is_default: isDefault })
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            fetchCourses();
+        });
+    }
+
+    function showOptions(courseId) {
+        const options = `
+            <button onclick="deleteCourse(${courseId})">Delete</button>
+            <button onclick="renameCourse(${courseId})">Rename</button>
+            <button onclick="openCourse(${courseId})">Open</button>
+        `;
+        alert(options);
+    }
+
+    function deleteCourse(courseId) {
+        fetch('course_handler.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ action: 'delete', id: courseId })
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            fetchCourses();
+        });
+    }
+
+    function renameCourse(courseId) {
+        const newName = prompt("Enter new course name:");
+        fetch('course_handler.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ action: 'rename', id: courseId, new_name: newName })
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            fetchCourses();
+        });
+    }
+
+    function openCourse(courseId) {
+        fetch('fetch_course_file.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: courseId })
+        })
+        .then(response => response.text())
+        .then(filePath => {
+            window.open(filePath, '_blank');
+        });
+    }
+
+    fetchCourses();
+</script>
 </body>
 </html>

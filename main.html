@@ -39,8 +39,8 @@
             <div class="filter_container">
                 <section class="filter">Sort by:</label>
                     <select name="filter" id="filter">
-                      <option value="sesame">Alphabetical (A to Z)</option>
-                      <option value="potatoe">Alphabetical (Z to A)</option>
+                      <option value="ascending-order">Alphabetical (A to Z)</option>
+                      <option value="descneding-order">Alphabetical (Z to A)</option>
                     </select>
                   </section>
             </div>
@@ -48,6 +48,27 @@
             <div class="course_item_container">
                 <div class="course_title_container">
                     <h3 class="course_title">Course Name</h3>
+                    <div class="dropdown">
+                        <button class="dropbtn">...</button>
+                        <div class="dropdown-content">
+                            <button onclick="renameCourse(1)">Rename</button>
+                            <button onclick="deleteCourse(1)">Delete</button>
+                            <button onclick="window.open('course_file_path.html', '_blank')">Open</button>
+                        </div>
+
+                        <script src="course_handle_button.js"></script>
+
+                        <div class="course_list">
+                            <div id="course_items_container"></div>
+                            <div class="pagination_controls">
+                                <button id="prev_page" disabled>Previous</button>
+                                <span id="page_indicator">Page 1</span>
+                                <button id="next_page">Next</button>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
                 </div>
             </div>
 
