@@ -43,6 +43,34 @@
                       <option value="descneding-order">Alphabetical (Z to A)</option>
                     </select>
                   </section>
+
+                <?php
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "your_database";
+                    
+                    $conn = new mysqli($servername, $username, $password, $dbname);
+                    
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+                    
+                    // Determine sorting order based on filter
+                    $order = "ASC"; // Default sorting
+                    if (isset($_GET['filter']) && $_GET['filter'] == 'desc') {
+                        $order = "DESC";
+                    }
+                    
+                    $sql = "SELECT * FROM files ORDER BY title $order";
+                    $result = $conn->query($sql);
+                ?>
+
+                <script>
+                    document.getElementById('filter').addEventListener('change', function() {
+                    document.getElementById('filter_form').submit();
+                    });
+                </script>
             </div>
 
             <div class="course_item_container">
@@ -78,6 +106,17 @@
                             </div>
                         </div>
                     </div>
+
+                    <?php
+                    $courses = scandir('courses/'); // Directory where course files are stored
+                    $course_titles = array_filter($courses, function ($course) {
+                        return !in_array($course, ['.', '..']);
+                    });
+
+                    foreach ($course_titles as $index => $course) {
+                        echo "<div class='course_item' data-index='$index'>$course</div>";
+                    }
+                    ?>
             </div>
 
             <button id="myBtn" onclick="location.href='create_new_file.html'">+</button></a>
